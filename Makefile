@@ -4,12 +4,12 @@ VCDVIEW = gtkwave
 TESTBENCH = test
 .PHONY = clean
 
-SOURCES = 3to8dec.v adder.v ALU.v carry_register.v choose.v compliment.v COMPUTER.v CPU.v d_array.v d_ff.v increment.v mux.v pulse.v ram.v register2.v REST.v tri_state_buffer.v
+SOURCES = src/3to8dec.v src/adder.v src/ALU.v src/carry_register.v src/choose.v src/compliment.v src/COMPUTER.v src/CPU.v src/d_array.v src/d_ff.v src/increment.v src/mux.v src/pulse.v src/ram.v src/register2.v src/REST.v src/tri_state_buffer.v
 
 OBJECTS = $(subst .v,.o,$(SOURCES))
 
 $(TARGET) : $(SOURCES)
-	$(COMPILER) $(SOURCES) $(TESTBENCH).v -o $(TARGET)
+	$(COMPILER) $(SOURCES) src/$(TESTBENCH).v -o $(TARGET)
 
 
 view-vcd : $(TARGET)
