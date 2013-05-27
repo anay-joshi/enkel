@@ -186,7 +186,8 @@ REST rest(
  show_out,
  show_load,
  show_reset,
- status
+ status,
+ ALU_inc_select
  );
 
 

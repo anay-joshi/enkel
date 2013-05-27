@@ -23,7 +23,8 @@ module REST(
  show_out,
  show_load,
  show_reset,
- status
+ status,
+ ALU_inc_select
  );
 output status;
 wire [7:0]from_inc;
