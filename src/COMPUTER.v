@@ -95,6 +95,7 @@ output [7:0] from_PC_to_ALU;
 wire [2:0] from_IR_to_decoder;
 wire [7:0]from_ALU;
 wire show_reset;
+wire ALU_inc_select;
 output status;
 
 assign nclk = ~clk;

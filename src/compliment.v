@@ -5,6 +5,6 @@ output reg[7:0]out;
 input enable;
 always@(in) 
 begin 
-out <= ~in;
+out = ~in;
 end
 endmodule

@@ -6,8 +6,8 @@ reg [7:0] out;
 
 always@(in or enable)
 begin
-if(enable)
-out <= in+1;
+	if(enable)
+		out = in+1;
 end
 
 endmodule

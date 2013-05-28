@@ -7,9 +7,9 @@ output reg value;
 always @ (d or load or reset)
 begin
 if(reset)
-value <= 1'b0;
+value = 1'b0;
 else
-if(load) value <= d;
+if(load) value = d;
 end
 
 endmodule

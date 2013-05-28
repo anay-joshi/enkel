@@ -292,6 +292,7 @@ wire MEM_ir_select_FEED;
 wire Bload_FEED;
 wire reset_FEED;
 output start_FEED;
+wire MEM_IR_select_FEED;
 
 assign mem_IR_enable_FEED = q1_FEED | q2_FEED | q3_FEED | q4_FEED;
 assign MEM_IR_select_FEED = 1'b0;
@@ -384,6 +385,7 @@ IR_PC_select = 1'b0;
 */
 wire reset_SHOW;
 output start_SHOW;
+wire reset_NEXT;
 
 wire MAR_load_SHOW;
 wire CS_SHOW;
@@ -477,6 +479,8 @@ assign start_LD = dec_LD & q5_NEXT;
 assign start_JMPB = dec_JMPB & q5_NEXT;
 assign start_SHOW = dec_SHOW & q5_NEXT;
 
+wire reset_start_stage_1;
+wire reset_start_stage_2;
 assign reset_start_stage_1 = turn_ON;
 assign reset_start_stage_2 = turn_ON;
 

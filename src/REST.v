@@ -100,14 +100,15 @@ assign from_IR_to_B[1] = from_IR[1];
 assign from_IR_to_B[0] = from_IR[0];
 
 assign status = from_IR[7] | from_IR[6] | from_IR[5] | (~from_IR[0]);
-
 assign from_PC_to_ALU = to_inc;
 assign from_mem_to_IR = from_mem_to_B;
 assign Data = aram;
 assign bram = Data;
 assign PC_to_choose = to_inc;
-
 assign show_in = from_mem_to_B;
+wire e1;
+wire e2;
+wire e3;
 
 
 register2 PC(.load(PC_load),.d(to_PC),.value(to_inc),.reset(PC_reset));
