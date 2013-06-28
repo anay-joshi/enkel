@@ -2,7 +2,6 @@ COMPILER = iverilog
 TARGET = enkel
 VCDVIEW = gtkwave
 TESTBENCH = test
-VERILATOR = verilator
 HEAD_MODULE = src/COMPUTER
 .PHONY = clean
 
@@ -20,8 +19,6 @@ view-vcd : $(TARGET)
 	./$(TARGET)
 	$(VCDVIEW) $(TESTBENCH).vcd	
 
-verilator : $(SOURCES)
-	$(VERILATOR) --cc $(HEAD_MODULE) -Isrc/
 	
 
 clean : 

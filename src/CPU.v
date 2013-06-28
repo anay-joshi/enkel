@@ -51,7 +51,6 @@ output enter_CPU;
 wire stop;
 wire MASTER_RESET;
 
-assign master_reset = MASTER_RESET;
 
 output master_reset;
 output A_PC_enable;
@@ -78,6 +77,7 @@ output show_load;
 output en_inc;
 
 
+assign master_reset = MASTER_RESET;
 assign MASTER_RESET_ = MASTER_RESET;
 assign en_inc = en_inc_NEXT;
 assign latch_PC_load = latch_PC_load_LD | latch_PC_load_JMPB;

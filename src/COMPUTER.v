@@ -88,6 +88,7 @@ wire [7:0]from_B_to_adder;
 wire PC_reset;
 wire en_inc;
 wire IR_reset;
+wire MAR_reset;
 output [7:0] from_A_to_mem;
 output [7:0] from_mem_to_B;
 output [7:0] from_IR_to_B;
@@ -102,6 +103,7 @@ assign nclk = ~clk;
 assign APc = Ac | Pc;
 assign PC_reset = master_reset;
 assign IR_reset = master_reset;
+assign MAR_reset = master_reset;
 assign sel = from_IR_to_decoder;
 assign show_reset = master_reset;
 assign from_mem = from_mem_to_B;
@@ -171,6 +173,7 @@ REST rest(
  PC_reset,
  en_inc,
  IR_reset,
+ MAR_reset,
  from_A_to_mem,
  from_mem_to_B,
  from_IR_to_B,

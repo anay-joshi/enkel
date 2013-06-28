@@ -7,6 +7,7 @@ module REST(
  PC_reset,
  en_inc,
  IR_reset,
+ MAR_reset,
  from_A_to_mem,
  from_mem_to_B,
  from_IR_to_B,
@@ -68,6 +69,7 @@ input IR_load;
 input PC_reset;
 input en_inc;
 input IR_reset;
+input MAR_reset;
 
 wire [7:0] show_in;
 wire [7:0] from_IR;
