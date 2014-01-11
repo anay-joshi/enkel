@@ -1,4 +1,4 @@
-##Enkel
+# Enkel
 
 Enkel is a an educational **ASAIG** (as simple as it gets) processor written in **verilog HDL**.
 
